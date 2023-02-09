@@ -45,39 +45,37 @@ public class Radio {
         if (currentStation != maxStation) {
             currentStation++;
             return;
-        }
-        if (currentStation == 9) {
+        } else {
             currentStation = 0;
         }
     }
+
     public void prev() {
         if (currentStation != 0) {
             currentStation--;
             return;
-        }
-        if (currentStation == 0) {
-            currentStation = 9;
+        } else {
+            currentStation = maxStation;
         }
     }
-// плюс и минус
-        public void plus () {
-            if (currentVolume != maxVolume) {
-                currentVolume++;
-                return;
-            }
-            if (currentVolume == maxVolume) {
-                currentVolume = maxVolume;
-            }
+
+    // плюс и минус
+    public void plus() {
+        if (currentVolume != maxVolume) {
+            currentVolume++;
+            return;
+        } else {
+            currentVolume = maxVolume;
         }
-        public void minus() {
-            if (currentVolume != 0) {
-                currentVolume--;
-                return;
-            }
-            if (currentVolume == 0) {
-                currentVolume = 0;
-            }
-            //
+    }
+
+    public void minus() {
+        if (currentVolume != 0) {
+            currentVolume--;
+            return;
+        } else {
+            currentVolume = 0;
+        }
 
     }
 }
