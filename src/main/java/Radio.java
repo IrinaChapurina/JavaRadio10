@@ -6,7 +6,7 @@ public class Radio {
 
     public Radio() {
         maxStation = 9;
-        maxVolume = 10;
+        maxVolume = 100;
     }
 
 
@@ -50,6 +50,7 @@ public class Radio {
             currentStation = 0;
         }
     }
+
     public void prev() {
         if (currentStation != 0) {
             currentStation--;
@@ -59,25 +60,27 @@ public class Radio {
             currentStation = 9;
         }
     }
-// плюс и минус
-        public void plus () {
-            if (currentVolume != maxVolume) {
-                currentVolume++;
-                return;
-            }
-            if (currentVolume == maxVolume) {
-                currentVolume = maxVolume;
-            }
+
+    // плюс и минус
+    public void plus() {
+        if (currentVolume != maxVolume) {
+            currentVolume++;
+            return;
         }
-        public void minus() {
-            if (currentVolume != 0) {
-                currentVolume--;
-                return;
-            }
-            if (currentVolume == 0) {
-                currentVolume = 0;
-            }
-            //
+        if (currentVolume == maxVolume) {
+            currentVolume = maxVolume;
+        }
+    }
+
+    public void minus() {
+        if (currentVolume != 0) {
+            currentVolume--;
+            return;
+        }
+        if (currentVolume == 0) {
+            currentVolume = 0;
+        }
+        //
 
     }
 }
