@@ -9,6 +9,15 @@ public class Radio {
         maxVolume = 100;
     }
 
+    public Radio(int stationCount) {
+        maxStation = stationCount - 1;
+
+    }
+
+    public int getCountStation() {
+        maxStation++;
+        return maxStation;
+    }
 
     public int getCurrentStation() {
         return currentStation;
@@ -45,8 +54,7 @@ public class Radio {
         if (currentStation != maxStation) {
             currentStation++;
             return;
-        }
-        if (currentStation == 9) {
+        } else {
             currentStation = 0;
         }
     }
@@ -55,9 +63,8 @@ public class Radio {
         if (currentStation != 0) {
             currentStation--;
             return;
-        }
-        if (currentStation == 0) {
-            currentStation = 9;
+        } else {
+            currentStation = maxStation;
         }
     }
 
@@ -66,8 +73,7 @@ public class Radio {
         if (currentVolume != maxVolume) {
             currentVolume++;
             return;
-        }
-        if (currentVolume == maxVolume) {
+        } else {
             currentVolume = maxVolume;
         }
     }
@@ -76,8 +82,7 @@ public class Radio {
         if (currentVolume != 0) {
             currentVolume--;
             return;
-        }
-        if (currentVolume == 0) {
+        } else {
             currentVolume = 0;
         }
         //

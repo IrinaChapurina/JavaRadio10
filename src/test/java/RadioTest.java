@@ -2,6 +2,23 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class RadioTest {
+
+    @Test
+    public void testCountStation() {
+        Radio radio = new Radio(20);
+        int expected = 20;
+        int actual = radio.getCountStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCountDefaultStation() {
+        Radio radio = new Radio();
+        int expected = 10;
+        int actual = radio.getCountStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
     @Test
     public void testCurrentStation() {
         Radio radio = new Radio();
